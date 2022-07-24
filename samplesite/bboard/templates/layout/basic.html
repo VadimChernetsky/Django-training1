@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Главная{% endblock %} :: Доска объявлений</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <header>
+                <div class="container header__book">
+                    <div></div>
+                    <div class="book">
+                        <h1 class="text1">Объявления</h1>
+                    </div>
+                    <div></div>
+                </div>
+        </header>
+        <nav>
+            <div class="container header__book">
+                <div></div>
+                <div></div>
+                <a href="{% url 'index' %}">Главная</a>
+                {% for rubric in rubrics %}
+                <a href="{% url 'by_rubric' rubric.pk %}">{{ rubric.name }}</a>
+                {% endfor %}
+                <a href="{% url 'add' %}">Добавить</a>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+        <section class="container header_book">
+            <div></div>
+            <div>
+                {% block content %}
+                {% endblock %}
+            </div>
+            <div></div>
+            <div></div>
+        </section>
+    </body>
+</html>

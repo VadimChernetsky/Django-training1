@@ -1,0 +1,40 @@
+.book {
+    font-size: 30pt;
+    text-transform: uppercase;
+    text-align: center;
+    padding-left: 20px;
+}
+body {
+    background: url(doska2.jpg);
+    background-size: 1000px;
+    background-position: center;
+}
+h1 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: oblique;
+
+}
+.header__book {
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.header_book {
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 50px;
+}
+nav {
+    font-size: 16pt;
+    width: 150 px;
+    float: none;
+}
+nav a {
+    display: block;
+    margin: 10px 0px;
+}
